@@ -6,4 +6,5 @@
 * `input` makes it possible for the user to type in the data
 * `label` names the input element
 * `select` allows you to in the option elements in a list
-* `option` name the options in a select list
+* `option` name the options in a select listl
+
