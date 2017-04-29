@@ -1,11 +1,11 @@
- <!DOCTYPE HTML>
+ <!DOCTYPE html>
 <html>
     <head>
-        <title> Pizza Order</title>
+        <title>Pizza Delivery Order</title>
     </head>
     <body>
-        <h1>Order Now</h1>
-        <form action= "success.html">
+        <h1>Pizza Delivery Order</h1>
+        <form name="orderform" action="success.html">
             <h2>Your Profile</h2>
             <fieldset name="personalinfo">
                 <div>
@@ -25,8 +25,94 @@
                     <input type="email" name="emailaddress">
                 </div>
             </fieldset>
-        
+            <h2>Delivery Address</h2>
+            <fieldset name="deliveryaddress">
+                <div>
+                    <label>Address line 1</label>
+                    <input type="text" name="addressline1">
+                </div>
+                <div>
+                    <label>Address line 2</label>
+                    <input type="text" name="addressline2">
+                </div>
+                <div>
+                    <label>City</label>
+                    <select name="city">
+                        <option value="newyork">New York</option>
+                        <option value="chicago">Chicago</option>
+                        <option value="austin">Austin</option>
+                        <option value="sandiego">San Diego</option>
+                        <option value="sanfrancisco">San Francisco</option>
+                        <option value="Seattle">Seattle</option>
+                    </select>
+                </div>
+                <div> <label>State</label>
+                    <select name="state">
+                        <option value="ca">CA</option>
+                        <option value="il">IL</option>
+                        <option value="ny">NY</option>
+                        <option value="tx">TX</option>
+                        <option value="wa">WA</option>
+                    </select> 
+                </div>
+                <div>
+                    <label>Delivery Instructions:</label><br>
+                    <textarea name="comments1"> </textarea>
+                </div>
+            </fieldset>
+            <h2>Your Pizza</h2>
+            <fieldset name="pizza">
+                <div>
+                    <legend name="size">Size</legend>
+                    <label>
+                        Small<input type="radio" name="size" value="small">
+                    </label>
+                    <label>
+                        Medium<input type="radio" name="size" value="medium">
+                    </label>
+                    <label>
+                        Large<input type="radio" name="size" value="large">
+                    </label>
+                    
+                </div>
+                <br>
+                <div>
+                    <legend name="crust">Crust</legend>
+                    <label>
+                        Thin Crust<input type="radio" name="crust" value="thin">
+                    </label>
+                    <label>
+                        Hand-Tossed<input type="radio" name="crust" value="handtossed">
+                    </label>
+                    
+                </div>
+                <br>
+                <div>
+                    <legend>Toppings</legend>
+                    <label>
+                        <input type="checkbox" name="toppings1" value="cheese"> Cheese
+                    </label>
+                    <label>
+                        <input type="checkbox" name="toppings2" value="pepperoni"> Pepperoni
+                     </label>
+                    <label>
+                        <input type="checkbox" name="toppings3" value="greenpepper"> Green Peppers<br> 
+                     </label>
+                    <label>
+                        <input type="checkbox" name="toppings4" value="mushrooms"> Mushrooms
+                     </label>
+                    <label>
+                        <input type="checkbox" name="toppings5" value="bacon"> Bacon
+                    </label>
+                </div>
+                <br>
+                 <div>
+                    <label>Special Requests/Dietary Restrictions:</label><br>
+                    <textarea name="comments2" placeholder="Gluten Free"></textarea>
+                </div>
+            </fieldset>  
+            <button type="submit">Place your order</button>
+            <button type="reset">Reset</button>
         </form>
-        
     </body>
 </html>
