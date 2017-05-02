@@ -10,3 +10,12 @@
 .lists{
     font-size: .8em;
 }
+a:visited {
+    color: green;
+}
+a.work:hover {
+    font-size: 70px;
+}
+ul > li{ 
+color: red;
+}
