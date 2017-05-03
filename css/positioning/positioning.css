@@ -1,0 +1,26 @@
+.dressed { 
+    position: relative;
+}
+
+#octopus {
+    position: absolute;
+   top: 100px;
+    left: 300px;
+    z-index: -1;
+}
+
+#hat { 
+    position: absolute;
+    left: 285px;
+    top: 35px;
+    
+}
+
+#glasses { 
+    position: absolute;
+    left: 345px;
+    top: 200px;
+}
+
+
+
