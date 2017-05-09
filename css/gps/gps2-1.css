@@ -1,7 +1,6 @@
 body{
   font-family: helvetica;
 }
-
 header {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/7f/Cirrocumulus_to_Altocumulus.JPG")
 }
@@ -25,7 +24,7 @@ footer {
   width: 100%;
 }
 ul, { 
-list-style-type: circle;
+    list-style-type: circle;
 }
  
  
