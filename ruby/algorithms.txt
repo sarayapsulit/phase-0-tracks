@@ -1,0 +1,35 @@
+Elevator algorithm
+    -Get information on what floor does the human-master want to go to. 
+    -Face Elevator
+    -Figure what floor you are on (Check on top of elevator door or elevator buttons)
+        -if current floor is higher than desired floor
+            -then press DOWN
+        -if not
+            -Press UP
+    -Enter when door opens
+    -Face buttons
+    -Press Button that has the number equal to human-master's desired floor number (Note G=1 and B=-1)
+        
+
+
+Washing dishes
+    -collect all used and dirty dishes
+        -throw all residual food from dishes 
+    - half-fill sink with hot water
+        -Place all dishes in sink 
+        - if items too large for sink (pot and pants) Fill large items with hot water 
+    -let soak and sit for 10- 15 mins
+    -Add soap to sink until lots of bubbles form
+    -Start soaping and scrubbing with sponge in circular motion remove all grime and streaks thhen place in second bowl of sink( if any)
+        -begin with glasses and serving large platters
+        -then flatware, plates and bowls
+        -utensils
+        -finally large cooking item like pots and pans
+    -rinse all dishes under tap and place them in drying rack
+        -sort by category 
+    -let dry
+    -put dishes away
+        
+        
+    
+    
