@@ -4,7 +4,7 @@ employees = gets.chomp.to_i
 until employees == 0 
 
     puts "What is your name?"
-    name = gets.chomp.capitalize
+    name = gets.chomp
     
     puts "How old are you?"
     age = gets.chomp.to_i
@@ -29,19 +29,36 @@ until employees == 0
     else 
         health = false
     end
+ 
+puts "Do you have any allergies? list as many as you need to. Type 'done' when finished."
     
-        if age == 2017 - year && garlic == true || health == true
+        allergy = gets.chomp
+
+    until allergy == "done" 
+     
+        if allergy == "sunshine" || allergy ==  "garlic" || allergy == "crosses"
+            puts "Probably a vampire."
+            allergy = "done"
+        else
+          allergy = gets.chomp
+        end
+        
+    end
+        
+    if name == "Drake Cula" || name == "Tu Fang"
+            puts "Definitely a vampire."
+        elsif age == 2017 - year && (garlic == true || health == true)
             puts "Probably not a vampire."
-        elsif age != 2017 - year && garlic == true || health == true
+        elsif age != 2017 - year && (garlic == true || health == true)
             puts "Probably a vampire."
         elsif age != 2017 - year && garlic == false && health == false
             puts  "Almost certainly a vampire."
-        elsif name == "Drake Cula" || name == "Tu Fang"
-            puts "Definitely a vampire."
         else 
             puts "Results inconclusive."
-        end
+    end
         
     employees = employees - 1
 end
+
+puts "Actually, nevermind! What do these questions have to do with anything? Let's all be friends."
         
