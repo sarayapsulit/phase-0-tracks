@@ -11,13 +11,13 @@ def encrypt(code)
         #z is an edge case make a special conditon for that
         if code[i] == "z"
             encrypted_code = encrypted_code + "a"
-            i+=1
+           
         # all the letters change to subsequent letters and add to encrypted code
         else
             encrypted_code = encrypted_code + code[i].next
-            i+=1
+          
         end
-        
+        i+=1
     end
     
     return encrypted_code
@@ -31,28 +31,22 @@ end
 def decrypt(code)
     # Ruby doesn't have a built-in method to call previous letters so we make our own
     def previous(letter)
-    i= 0 
-    # have alphabet for reference for the letter to know the index
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
-      until letter == alphabet[i]
+        # have alphabet for reference for the letter to know the index
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
+        i= 0 
+        until letter == alphabet[i]
             i+=1
-      end
-    # print the letter previous to it
-        return alphabet [i-1]
+        end
+            # print the letter previous to it
+            return alphabet [i-1]
     end
     
-    #Almost the same code as encrypt with 1 difference
+    #
     decrypted_code=""
     i = 0
     while i < code.length
-        if code[i] == "a"
-            decrypted_code = decrypted_code + "z"
-            i+=1
-        # we add our previoud method here instead of th next method    
-        else
-            decrypted_code = decrypted_code + previous(code[i])
-            i+=1
-        end  
+        decrypted_code = decrypted_code + previous(code[i])
+        i+=1
     end
     return decrypted_code
 end
