@@ -16,3 +16,19 @@ locations = {
 
 p states
 p locations
+
+
+states.each do | states|
+    puts states
+end
+
+locations.each do |states, cities|
+    puts states, cities
+end
+
+p states
+p locations
+
+states.map! do |states|
+    states.upcase
+end
