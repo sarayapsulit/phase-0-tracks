@@ -1,11 +1,6 @@
-#def exercise 
-#   print " what is your favorite color?"
-#color = gets.chomp
-#   yield (color)
-# end
 
 
-#exercise { |color| puts "your favorite color is  #{color}" }
+
 
 states =  ["New York", "California", "Illinois", "Texas"] 
 locations = {
@@ -55,3 +50,4 @@ hash_one = {
 
 array_one.take_while {|num| num < 2}
 hash_one.reject! {|letter,number| number > 5}
+
