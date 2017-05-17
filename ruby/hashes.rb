@@ -1,5 +1,10 @@
 #Interior desgin 
 # Grab info
+#   change variables into hash keys
+#   change data into appropriate types
+#ask if all data is correct
+#   if not change ask for which key and datathey want to change 
+#   add into hash
 
 client_info = { }
 
@@ -39,5 +44,6 @@ correct = gets.chomp
         values = gets.chomp
         client_info[keys] = values
     end
-    p client_info
+
+p client_info
     
