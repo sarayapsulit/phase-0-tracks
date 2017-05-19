@@ -1,12 +1,4 @@
-
-
-puts "Agent's Name: "
-agents_name = gets.chomp.downcase.split.reverse.join(' ')
-
-
-
-    
- def alias_maker(name)   
+def alias_maker(name)   
     def next_conso(letter)
         consonants = "bcdfghjklmnpqrstvwxyz"
         consonants = consonants.reverse
@@ -26,7 +18,7 @@ agents_name = gets.chomp.downcase.split.reverse.join(' ')
         end
         return vowels[i-1]
     end
-     
+    name = name.downcase.split.reverse.join(' ')
     new_alias=""
     i = 0
     while i < name.length
@@ -47,17 +39,35 @@ agents_name = gets.chomp.downcase.split.reverse.join(' ')
             
         end
     end
-     new_alias = new_alias.split 
-     new_alias= new_alias[0].capitalize + " " +new_alias[1].capitalize
+     new_alias = new_alias.split(' ').map { |name| name.capitalize }.join(' ')
+    
     return new_alias
 end
 
+puts "Welcome Agent to the Alias Maker 2. Kindly type in the first and last names you need to change. Type 'quit' when done. "
+agents_name = ""
+agents= {}
  until agents_name == "quit"
-     puts "Your new name is " 
-     puts alias_maker(agents_name)
-     agents_name = gets.chomp.downcase.split.reverse.join(' ')
-
+    
+ 
+     agents_name = gets.chomp
+   
+    
+     if agents_name == "quit" 
+        puts " Thank you for using the Alias Maker."
+     else 
+         new_alias = alias_maker(agents_name)
+         puts " Your name '#{agents_name}' has made the alias, '#{new_alias}'."
+         agents[agents_name.to_sym] = new_alias
+     end
 end
+
+p agents
+
+
+
+
+
 
 
 
