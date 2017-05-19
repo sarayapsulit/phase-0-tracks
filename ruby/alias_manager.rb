@@ -52,11 +52,12 @@ agents_name = gets.chomp.downcase.split.reverse.join(' ')
     return new_alias
 end
 
+ until agents_name == "quit"
+     puts "Your new name is " 
+     puts alias_maker(agents_name)
+     agents_name = gets.chomp.downcase.split.reverse.join(' ')
 
-puts alias_maker(agents_name)
-
-
-
+end
 
 
 
