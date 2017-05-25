@@ -1,7 +1,7 @@
 class Santa
     
-    def initialize(name, gender, ethnicity)
-        @name = name
+    def initialize(gender, ethnicity)
+     
         @gender = gender
         @ethnicity = ethnicity
         @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -17,22 +17,59 @@ class Santa
         puts "That was a good #{type_of_cookie}!"
     end
     
+    def celebrate_birthday
+        @age +=1
+    end
+    
+    def get_mad_at(reindeer)
+        @reindeer_ranking.insert((8), @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer)))
+    end
+    
+    def gender= (new_gender)
+        @gender = new_gender
+    end
+    
+    def gender
+        @gender
+    end
+        
+    def age
+        @age
+    end
+    
+    def ethnicity
+        @ethnicity
+    end
+    
+    def reindeer_ranking
+        @reindeer_ranking
+    end
 end
 
 #-------DRIVER CODE------ 
 
-#nycSanta = Santa.new
-#nycSanta.speak
-#nycSanta.eat_milk_and_cookies("Oreo")
+clause= Santa.new("Boy", "white")
+clause.speak
+clause.eat_milk_and_cookies("Oreo")
+clause.celebrate_birthday
+clause.celebrate_birthday
+clause.celebrate_birthday
+clause.get_mad_at("Vixen")
+clause.gender = ("Male")
+
+p clause.age
+p clause.gender
+p clause.ethnicity
+p clause.reindeer_ranking
+
 
 santas = []
-ex_names= ["Doc", "Grumpy", "Happy", "Sleepy", "Bashful", "Sneezy", "Dopey"]
+
 ex_genders = ["Male", "Female", "Agender", "Bigender", "Gender Fluid", "Transgender", "N/A" ]
 ex_ethnicities =["Caucasian", "African", "Asian", "Latino", "Mixed", "Prefer not to say", "N/A"]
 
-ex_names.length.times do |i|
-        santas << Santa.new(ex_names[i], ex_genders[i], ex_ethnicities[i])
+ex_genders.length.times do |i|
+        santas << Santa.new(ex_genders[i], ex_ethnicities[i])
 end
-
 
 p santas
