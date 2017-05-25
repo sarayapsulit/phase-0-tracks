@@ -43,13 +43,23 @@ jet.paw("left")
 #----- NEW CLASS------
 
 class Exercise
+
+    def push_ups(num)
+        num.times do 
+            puts "*bend arms*"
+            puts "*push up*"
+        end
+    end
+    
+    def sit_ups(num)
+        num.times do 
+            puts "*lifts body towards thighs*"
+        end
+    end
+    
     
 end
 
-    
-    
-    
-    
     
     
     
