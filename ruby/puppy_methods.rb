@@ -14,7 +14,11 @@ class Puppy
         puts "*rolls over*"
     end
     
-    
+    def dog_years(years)
+        dog_age = years * 7
+        puts dog_age
+    end
+        
 end
 
 jet = Puppy.new
@@ -22,3 +26,4 @@ jet.fetch("bone")
 
 jet.speak(4)
 jet.roll_over
+jet.dog_years(8)
