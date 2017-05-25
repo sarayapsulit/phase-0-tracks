@@ -7,3 +7,5 @@ class Puppy
 
 end
 
+jet = Puppy.new
+jet.fetch("bone")
