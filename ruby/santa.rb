@@ -1,4 +1,7 @@
 class Santa
+
+    attr_reader :ethnicity, :reindeer_ranking, :age
+    attr_accessor :gender, 
     
     def initialize(gender, ethnicity)
      
@@ -24,31 +27,12 @@ class Santa
     def get_mad_at(reindeer)
         @reindeer_ranking.insert((8), @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer)))
     end
-    
-    def gender= (new_gender)
-        @gender = new_gender
-    end
-    
-    def gender
-        @gender
-    end
-        
-    def age
-        @age
-    end
-    
-    def ethnicity
-        @ethnicity
-    end
-    
-    def reindeer_ranking
-        @reindeer_ranking
-    end
 end
 
 #-------DRIVER CODE------ 
 
 clause= Santa.new("Boy", "white")
+p clause
 clause.speak
 clause.eat_milk_and_cookies("Oreo")
 clause.celebrate_birthday
