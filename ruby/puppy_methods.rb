@@ -10,9 +10,15 @@ class Puppy
         end
     end
     
+    def roll_over
+        puts "*rolls over*"
+    end
+    
+    
 end
 
 jet = Puppy.new
 jet.fetch("bone")
 
 jet.speak(4)
+jet.roll_over
