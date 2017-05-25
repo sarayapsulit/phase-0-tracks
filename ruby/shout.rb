@@ -31,6 +31,14 @@ class Coach
     include Shout
 end
         
+customer = Customer.new
+p customer.yell_angrily("what bad service")
+p customer.yelling_happily("I like your food")
 
+coach = Coach.new 
+p coach.yell_angrily("You didn't do your best")
+
+p coach.yelling_happily("Great move")
+ 
 
     
