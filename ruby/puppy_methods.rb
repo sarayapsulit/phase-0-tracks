@@ -19,6 +19,10 @@ class Puppy
         puts dog_age
     end
         
+    def paw(hand)
+        puts "*Shakes your #{hand} hand*"
+    end
+    
 end
 
 jet = Puppy.new
@@ -27,3 +31,4 @@ jet.fetch("bone")
 jet.speak(4)
 jet.roll_over
 jet.dog_years(8)
+jet.paw("left")
