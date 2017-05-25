@@ -42,7 +42,11 @@ jet.paw("left")
 
 #----- NEW CLASS------
 
-class Exercise
+class WorkOut
+    
+    def initialize(exerciser)
+        puts "#{exerciser} has started his workout."
+    end
 
     def push_ups(num)
         num.times do 
