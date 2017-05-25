@@ -43,7 +43,7 @@ jet.paw("left")
 #----- NEW CLASS------
 
 class WorkOut
-    
+  
     def initialize(exerciser)
         puts "#{exerciser} has started his workout."
     end
@@ -58,13 +58,20 @@ class WorkOut
     def sit_ups(num)
         num.times do 
             puts "*lifts body towards thighs*"
+            puts "*lies back down*"
         end
     end
     
     
 end
-
     
+instances = []
+50.times do |exerciser|
+    exerciser = WorkOut.new("Exerciser")
+    instances << exerciser
+end
+
+p instances
     
     
     
