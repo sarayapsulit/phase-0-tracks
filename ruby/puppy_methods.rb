@@ -1,5 +1,5 @@
 class Puppy
-
+    
     def fetch(toy)
         puts "I brought back the #{toy}!"
         toy
@@ -23,7 +23,13 @@ class Puppy
         puts "*Shakes your #{hand} hand*"
     end
     
+    def initialize
+        puts "Initializing new puppy instance... "
+    end
 end
+
+#----- DRIVER CODE-------
+
 
 jet = Puppy.new
 jet.fetch("bone")
