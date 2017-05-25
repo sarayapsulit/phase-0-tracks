@@ -38,3 +38,25 @@ jet.speak(4)
 jet.roll_over
 jet.dog_years(8)
 jet.paw("left")
+
+
+#----- NEW CLASS------
+
+class Exercise
+    
+end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
