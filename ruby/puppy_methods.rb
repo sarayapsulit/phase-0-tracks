@@ -73,6 +73,10 @@ end
 
 p instances
     
+instances.each do |name|
+    name.push_ups(1)
+    name.sit_ups(1)
+end
     
     
     
