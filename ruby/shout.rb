@@ -9,3 +9,5 @@ module Shout
 end
 
 
+p Shout.yell_angrily("I hate you")
+p Shout.yelling_happily("This is great")
