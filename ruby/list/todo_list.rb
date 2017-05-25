@@ -1,4 +1,5 @@
 class TodoList
+    
     def initialize(list)
         @list = list
     end
@@ -11,8 +12,9 @@ class TodoList
         @list.push(todo)
     end
     
-    
-    
+    def delete_item(todo)
+        @list.delete(todo)
+    end
     
 end
 
