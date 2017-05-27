@@ -93,7 +93,20 @@ end
 
 finalize_list(grocery_list)
 
+#--------------- REFLECTION-----------------
 
+#What did you learn about pseudocode from working on this challenge?
+#psuedocoding makes the flow of coding much easier and allows for a more efficient way of writing code for refering to 
+#What are the tradeoffs of using arrays and hashes for this challenge?
+# I think using hashes here worked best because of the type of grocery list the user wanted. having quantities and items corresponding to each other
+#What does a method return?
+# the final conditions/statement value
+#What kind of things can you pass into methods as arguments?
+# all the data types
+#How can you pass information between methods?
+#by setting the data into a reusable variable and placing in the the arguements
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+#psuedocoding in this challenge was definitely solidified for me i noticed here I could do more learning iteration to keep my code simpler.
 
 
 
