@@ -1,6 +1,6 @@
 # Virus Predictor
 # I worked on this challenge [by myself ].
-# I spent [] hours on this challenge.
+# I spent [2.5] hours on this challenge.
 
 #Release 0: The program is showing how influenze will affect a given population in the state through predicted deaths and how quickly it will spread. 
 
