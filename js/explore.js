@@ -15,3 +15,6 @@ function reverse(str) {
 }
          
  reverse('hello')
+
+var newWord = reverse('hello')
+ 
