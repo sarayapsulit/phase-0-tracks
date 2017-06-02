@@ -18,3 +18,8 @@ function reverse(str) {
 
 var newWord = reverse('hello')
  
+if (1 == 1) {
+    console.log(newWord);}
+else{
+    console.log('This statement wont print because 1 == 1 is true');
+}
