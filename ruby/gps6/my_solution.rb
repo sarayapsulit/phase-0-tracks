@@ -1,15 +1,20 @@
 # Virus Predictor
 # I worked on this challenge [by myself ].
 # I spent [] hours on this challenge.
+
+#Release 0: The program is showing how influenze will affect a given population in the state through predicted deaths and how quickly it will spread. 
+
 # EXPLANATION OF require_relative
+# Release 1: Require Relative allows you to pull data from a different document unlike require which needs an absolute location.
+
 
 
 require_relative 'state_data'
-# Require Relative allows you to pull data from a different document. Require uses absolute location.
 
-#Release 2: The Hash has all 50 states their population and their population density. The first level of Hash uses the state name as a string for the key and its value would the state data. the the second level would be the population and population as symbol keys to correspond to the statistics.  STATE_DATA is a constant variable not meant to be changed through out the program and constants being declared outside of the class makes it a global scope.
+# Release 2: The Hash has all 50 states their population and their population density. The first level of Hash uses the state name as a string for the key and its value would the state data. the the second level would be the population and population as symbol keys to correspond to the statistics.  STATE_DATA is a constant variable not meant to be changed through out the program and constants being declared outside of the class makes it a global scope.
+
 class VirusPredictor
-    # intializes the values
+    #Release 3: intializes the values
     def initialize(state_of_origin, population_density, population)
         @state = state_of_origin
         @population = population
@@ -22,9 +27,9 @@ class VirusPredictor
     end
     
     private
-    #Private will hide all subsquent methods.
+    # Release 6: Private will hide all subsquent methods. If placed above 'virus_effects' it will hide and the drive code will no longer run. I would want to use this method when I only want to allow the user to use method I choose.
     
-    # calculates the number of deaths based on population density
+    # Release 3: Calculates the number of deaths based on population.
     def predicted_deaths
        # predicted deaths is solely based on population density
 #        if @population_density >= 200
@@ -47,7 +52,7 @@ class VirusPredictor
         
         print "#{@state} will lose #{number_of_deaths} people in this outbreak"
      end
-    #defines the rate of spreading, giving an estimated time(months) for the disease to infect everyone in a given state depening on it's population density 
+    # Release 3: Defines the rate of spreading, giving an estimated time(months) for the disease to infect everyone in a given state depening on it's population density 
      def speed_of_spread(population_density, state) #in months
         # We are still perfecting our formula here. The speed is also affected
         # by additional factors we haven't added into this functionality.
@@ -85,10 +90,11 @@ end
 #=======================================================================
 # DRIVER CODE
  # initialize VirusPredictor for each state
-
+    
+# Release 4: This doesn't belong in the class as its report for the user to see and the program makes this possible.
 STATE_DATA.each do |state, data|
-    state = VirusPredictor.new(state, data[:population_density], data[:population])
-    state.virus_effects
+    infected_state = VirusPredictor.new(state, data[:population_density], data[:population])
+    infected_state.virus_effects
 end
 
 

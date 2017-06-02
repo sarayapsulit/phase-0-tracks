@@ -1,9 +1,7 @@
 describe Dancer do
   let(:dancer) { Dancer.new("Misty Copeland", 33) }
 
-  it "pirouettes" do
-    expect(dancer.pirouette).to eq "*twirls*"
-  end
+
 
   it "bows to a partner" do
     expect(dancer.bow).to eq "*bows*"
