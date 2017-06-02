@@ -6,6 +6,8 @@
 
 require_relative 'state_data'
 # Require Relative allows you to pull data from a different document. Require uses absolute location.
+
+#Release 2: The Hash has all 50 states their population and their population density. The first level of Hash uses the state name as a string for the key and its value would the state data. the the second level would be the population and population as symbol keys to correspond to the statistics.  STATE_DATA is a constant variable not meant to be changed through out the program and constants being declared outside of the class makes it a global scope.
 class VirusPredictor
     # intializes the values
     def initialize(state_of_origin, population_density, population)
