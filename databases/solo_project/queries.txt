@@ -1,0 +1,40 @@
+sqlite> SELECT * FROM parties;
+1|Sara Sulit|1991-07-05|true|3
+2|Colene Yap|1992-10-10|false|2
+3|Kelly Folsey|1985-05-24|true|1
+4|Joey Foxton|1989-9-16|false|1
+5|Kyle MacSet|1990-1-21|false|2
+
+sqlite> UPDATE parties SET gift="true" WHERE name="Joey Foxton";
+
+sqlite> SELECT * FROM parties, locations WHERE parties.location_id = locations.id;
+1|Sara Sulit|1991-07-05|true|3|3|restuarant
+2|Colene Yap|1992-10-10|false|2|2|bar
+3|Kelly Folsey|1985-05-24|true|1|1|home
+4|Joey Foxton|1989-9-16|true|1|1|home
+5|Kyle MacSet|1990-1-21|false|2|2|bar
+sqlite>
+
+
+sqlite> SELECT parties.name, parties.birthday, locations.location, parties.gift FROM parties JOIN locations ON parties.location_id = locations.id;
+Sara Sulit|1991-07-05|restuarant|true
+Colene Yap|1992-10-10|bar|false
+Kelly Folsey|1985-05-24|home|true
+Joey Foxton|1989-9-16|home|true
+Kyle MacSet|1990-1-21|bar|false
+
+sqlite> Delete From parties where name="Kelly Folsey";
+sqlite> SELECT * FROM parties
+1|Sara Sulit|1991-07-05|true|3
+2|Colene Yap|1992-10-10|false|2
+4|Joey Foxton|1989-9-16|true|1
+5|Kyle MacSet|1990-1-21|false|2
+
+sqlite> select * from parties outer join locations on parties.location_id = locations.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite> select * from parties left join locations on parties.location_id = locations.id;
+1|Sara Sulit|1991-07-05|true|3|3|restuarant
+2|Colene Yap|1992-10-10|false|2|2|bar
+4|Joey Foxton|1989-9-16|true|1|1|home
+5|Kyle MacSet|1990-1-21|false|2|2|bar
+sqlite>
