@@ -1,0 +1,10 @@
+sqlite> SELECT * FROM businesses, users, reviews WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id;
+3|The Beagle Nightclub|2|Mandy|Kaling|1|4|Great place to get drinks!|3|2
+4|Lotus Yoga|3|Angela|Jolie|2|2|Too hot inside! >:(|4|3
+6|Sushi World|6|Merryl|Streepman|3|5|So yummy!!! Love it here|6|6
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews Join businesses, users ON reviews.business_id = businesses.id AND reviews.user_id = users.id;
+Mandy|Kaling|The Beagle Nightclub|4|Great place to get drinks!
+Angela|Jolie|Lotus Yoga|2|Too hot inside! >:(
+Merryl|Streepman|Sushi World|5|So yummy!!! Love it here
+
